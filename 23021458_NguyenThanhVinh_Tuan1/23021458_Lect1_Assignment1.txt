@@ -1,0 +1,21 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+string dao_tu(string str)
+{
+	int vinh = str.length();
+	for (int i = 0; i < vinh / 2; i++)
+	{
+		char vinh1 = str[i];
+		str[i] = str[vinh - i - 1];
+		str[vinh - i - 1] = vinh1;
+	}
+	return str;
+}
+int main()
+{
+	string str;
+	getline(cin, str);
+	cout << dao_tu(str);
+	return 0;
+}
